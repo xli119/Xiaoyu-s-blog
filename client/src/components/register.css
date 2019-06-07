@@ -1,0 +1,30 @@
+img {
+  height: auto;
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  top: 38%;
+  width: 100%;
+  color: white;
+}
+
+.logo {
+  width: 341px;
+  margin: 0 auto 60px;
+}
+.main-region {
+  margin: 0 auto;
+  width: 420px;
+  background: yellowgreen;
+  color: black;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.m-form {
+  margin: auto;
+  width: 280px;
+}

@@ -1,4 +1,6 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import './register.css';
 const axios = require('axios');
 
 
@@ -39,24 +41,35 @@ class Register extends React.Component{
     .catch(error => {
       console.log('error:', error.response)
   })
+  .then(window.location.href = '/show-customers');
   }
 
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label>your username
-              <input onChange={this.handleChange} type="text" className="form-control" name="username" id="input_name" placeholder="name" required minLength="2" maxLength="12" />
-            </label>
+        <img src="bgi01.jpg" alt="background-image01"/>
+        <div className="content">
+          <div className='logo'>
+            <h1>Xiaoyu's Blog</h1>
+            <h2>小雨博客</h2>
+          </div> 
+          <div className='main-region'>
+            <form onSubmit={this.handleSubmit} className='m-form'>
+              <div className="form-group">
+                <label>your username
+                  <input onChange={this.handleChange} type="text" className="form-control" name="username" id="input_name" 
+                  placeholder="name" required minLength="2" maxLength="12" />
+                </label>
+              </div>
+              <div className="form-group">
+                <label>password
+                  <input onChange={this.handleChange} className="form-control"  type="password" name="password" id="password" required minLength="3"/>
+                </label>
+              </div>
+              <button className="btn btn-default btn-primary" type="submit">Register</button>
+            </form>
           </div>
-          <div className="form-group">
-            <label>password
-              <input onChange={this.handleChange} className="form-control"  type="password" name="password" id="password" required minLength="3"/>
-            </label>
-          </div>
-          <button className="btn btn-default" type="submit">Register</button>
-        </form>
+        </div>
       </div>
     );
   };
